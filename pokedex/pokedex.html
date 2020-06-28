@@ -19,6 +19,8 @@
 </head>
 
 <body class="">
+ 
+    
 
     <div id="pokedex" class="relative">
 
@@ -39,15 +41,15 @@
             <input id="buscador" type="text" class="" onfocus="resetScreen()" placeholder="¿Qué Pokemon?">
             <input class="controles relative" id="enter" type="submit" value="Enter">
         </form>
-        <div class="text-center texto mensaje absolute" onclick="$('.busqueda').focus()" id="encontrado-mensaje">Encontrado!</div>
+        <div class="text-center texto mensaje absolute" onclick="$('#buscador').focus()" id="encontrado-mensaje">Encontrado!</div>
     </div>
 
-    <div id="infoBox" class=" b-green  ">
+    <div id="infoBox" class="  ">
 
-        <div id="pokemonList" class="b-blue"></div>
+    <div id="pokemonList" class="hideOnStacking"></div>
 
-    </div>
-
+    
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>

@@ -139,7 +139,7 @@ $(document).ready(function() {
                         //el pokemon ruge cuando es encontrado con la funcion rugir
                     rugir(data.id);
                     $('#pokeInfo').append(`<div class="text-center texto my-3"> <h3>${capitalizar(data.name)}</h3> <div>`); //jquery
-                    $("#pokeInfo").append(`<img id="pImg" height="250px" onclick="rugir('${data.id}')" src="${data.sprites.front_default}" alt="${data.name}"> <img>`);
+                    $("#pokeInfo").append(`<img id="pImg" height="250" onclick="rugir('${data.id}')" src="${data.sprites.front_default}" alt="${data.name}"> <img>`);
                     $("#pokeInfo").append(`<div class="text-center texto my-3"> <p>Peso: ${data.weight/10} [kg]<p> <div>`);
                     var options = {
                         animationEnabled: true,
@@ -176,7 +176,7 @@ $(document).ready(function() {
                 //Append la coincidencias de pokemones como un listado en infoBox
                 $('#pokemonList').empty();
                 if (!document.getElementById('title')) {
-                    $("#infoBox").prepend('<h10 id="title">Más Pokemones:</h10>');
+                    $("#infoBox").prepend('<h10 id="title" class="hideOnStacking">Más Pokemones:</h10>');
                 }
 
                 var i = 1;

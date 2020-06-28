@@ -12,11 +12,19 @@ body {
     background-color: #D6D6D6;
 }
 
+.app {
+        width: 578px;
+        height: 600px;
+     /*   background-color: red;*/
+    
+}
+
 
 /* Ancho y largo del pokedex. La idea es sea dinamico */
 
 
-/* El tamaño durante la construccion fuede 578x600 px */
+/* El tamaño durante la construccion fue de 578x600 px, ahora es dinamica:
+    */
 
 #pokedex {
     z-index: 0;
@@ -24,6 +32,12 @@ body {
     display: inline-block;
     /* height: 100vh;
     width: 96.3vh; */
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;  
+    margin: auto; 
 }
 
 #pokedex-img {
@@ -61,7 +75,7 @@ body {
     top: 19%;
     left: 8.4%;
     width: 36%;
-    height: 66.8%;
+    height: 65.03%;
     z-index: 0;
 }
 
@@ -73,6 +87,7 @@ body {
 
 #pImg {
     height: 50%;
+
 }
 
 #pStats {
@@ -96,9 +111,10 @@ body {
 .pantalla-busqueda {
     margin: 0;
     top: 29.65%;
-    left: 59.6%;
-    width: 35.9%;
+    left: 59.9%;
+    width: 36.2%;
     height: 15.8%;
+    border-radius: 10px;
 }
 
 #buscador {
@@ -113,6 +129,7 @@ body {
     width: 32.8%;
     height: 3.3%;
     color: green;
+    border-radius: 10px;
 }
 
 .controles {
@@ -124,9 +141,9 @@ body {
     position: absolute;
     font-size: 0.75rem;
     top: 319.6%;
-    left: 0;
-    width: 42.9%;
-    height: 43.2%;
+    left: -1.1%;
+    width: 41.9%;
+    height: 42%;
 }
 
 input:focus {
@@ -147,6 +164,7 @@ input {
     color: white;
     border-color: black;
     font-size: 1rem;
+    border-radius: 10px;
 }
 
 
@@ -174,7 +192,11 @@ input {
     margin-top: 30px;
     font-size: 0.75rem;
 }
-
+@media (max-width: 780px) {
+    .hideOnStacking {
+       display: none;
+    }
+}
 
 /* END COINCIDENCIA */
 
