@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -16,125 +16,140 @@
 font-family: 'Kaushan Script', cursive;
 font-family: 'Sawarabi Gothic', sans-serif;
 font-family: 'Sawarabi Mincho', sans-serif;-->
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kaushan+Script&family=Sawarabi+Gothic&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kaushan+Script&family=Sawarabi+Gothic&family=Sawarabi+Mincho&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index_style.css">
     <title>kamaldigital</title>
 </head>
 
 <body>
 
-    <h1 class="text-right"><scope class="titulo-kamal">Kamál.</scope><scope class="titulo-digital">digital</scope></h1>
+    <h1 class="text-right">
+        <scope class="titulo-kamal">Kamál.</scope>
+        <scope class="titulo-digital">digital</scope>
+    </h1>
 
-    <header class="col-12"style="max-width: 100%; height: 50vw;">
-        <div class="overlay"></div>
-        <video id="header-video" style="max-width: 100%; height: auto;" defaultMuted="defaultMuted" playsinline="playsinline" autoplay="autoplay"
+    <header class="col-12" style="max-width: 100%; height: 50vw;">
+        <div class="overlay">
+            <button id="vidbuttonPlay" onclick="togglePlay()" class="btn video-button"><i class="fa fa-pause"></i></button>
+            <br>
+            <button id="vidbuttonMute" onclick="toggleMute()"  class="btn video-button">mute</i></button>
+        </div>
+        <video id="header-video" style="max-width: 100%; height: auto;" playsinline="playsinline" autoplay="autoplay"
             loop="loop">
             <source src="ghost-slow.mp4" type="video/mp4">
             <source src="ghostritualdonthugme-v1.0-24.7mb.webm" type="video/webm">
         </video>
-        
 
-            <div class="text-white quotes-container texto-video">
 
-                <div class="fading-quotes" style="font-family: 'Lucida Sans'; font-size: 2.5vw;">
-                    <p class="  mb-0 text-right">"La originalidad no es otra cosa que imitación con
-                        criterio" </p>
-                    <br>
-                    <p class=" mb-0 text-right">- Voltaire</p>
+
+<div class="quotes-container texto-video">
+
+    <div class="fading-quotes" style="font-family: 'Lucida Sans'; font-size: 2.5vw;">
+        <p class="  mb-0 text-right">"La originalidad no es otra cosa que imitación con
+            criterio" </p>
+        <br>
+        <p class=" mb-0 text-right">- Voltaire</p>
+    </div>
+    <div class="fading-quotes" style="font-family: 'Dancing Script'; font-size: 3.5vw;">
+        <p class="mb-0 text-right">"No tengas miedo de la perfección, nunca la vas a alcanzar"</p>
+        <br>
+        <p class="mb-0 text-right">- Dali</p>
+    </div>
+    <div class="fading-quotes" style="font-family: 'Sawarabi Mincho';   font-size: 2.5vw;">
+        <p class=" mb-0 text-right">"La curiosidad sobre la vida en todos sus aspectos, continúa siendo
+            el secreto de las personas más creativas"</p>
+        <br>
+        <p class="mb-0 text-right">- Burnett</p>
+    </div>
+    <div class="fading-quotes" style="font-family: 'Kaushan Script'; font-size: 2.2vw;">
+        <p class=" mb-0 text-right">"La creatividad es contagiosa. Pásala"</p>
+        <br>
+        <p class="s mb-0 text-right">- Einstein</p>
+    </div>
+
+</div>
+</header>
+
+<!-- Carddeck con proyectos -->
+<div class="card-group m-5 my-10 ">
+    <div class="row text-center">
+        <div class="card my-2 col-12 col-md-4 bg-dark">
+            <a style="text-decoration: none;" target="second" href="pokedex/pokedex.html">
+                <h5 class="card-title  my-3 text-center roboto" style=" color: red; text-shadow: 1px 1px rgb(0, 255, 0);">
+                    Pokedex v2
+                </h5>
+                <div class="container-fluid text-center">
+                    <img class="card-img-top rounded center" src="assets/img/pokedex-icono.png" alt="pokedex.jpg">
                 </div>
-                <div class="fading-quotes" style="font-family: 'Dancing Script'; font-size: 3.5vw;">
-                    <p class="mb-0 text-right">"No tengas miedo de la perfección, nunca la vas a alcanzar"</p>
-                    <br>
-                    <p class="mb-0 text-right">- Dali</p>
-                </div>
-                <div class="fading-quotes" style="font-family: 'Sawarabi Mincho';   font-size: 2.5vw;">
-                    <p class=" mb-0 text-right">"La curiosidad sobre la vida en todos sus aspectos, continúa siendo
-                        el secreto de las personas más creativas"</p>
-                    <br>
-                    <p class="mb-0 text-right">- Burnett</p>
-                </div>
-                <div class="fading-quotes" style="font-family: 'Kaushan Script'; font-size: 2.2vw;">
-                    <p class=" mb-0 text-right">"La creatividad es contagiosa. Pásala"</p>
-                    <br>
-                    <p class="s mb-0 text-right">- Einstein</p>
-                </div>
-
-        </div>
-    </header>
-
-    <!-- Carddeck con proyectos -->
-    <div class="card-group m-5 my-10 ">
-        <div class="row text-center">
-            <div class="card my-2 col-12 col-md-4 bg-dark">
-                <a style="text-decoration: none ;" target="second" href="pokedex/pokedex.html">
-                    <h5 class="card-title  my-3 text-center roboto" style="text-shadow: 2px 2px green; color: red;">
-                        Pokedex v2
-                    </h5>
-                    <div class="container-fluid text-center">
-                        <img class="card-img-top rounded center" src="assets/img/pokedex-icono.png"
-                            alt="pokedex.jpg">
-                    </div>
-                </a>
-                <div class="card-body">
+            </a>
+            <div class="card-body">
 
 
-                    <p class="card-text text-justify">Revisa las estadisticas de tus pokemones favoritos!</p>
-                    <p class="card-text text-justify ">Pokedex v2 es proyecto que utiliza JS y jQuery para conectarse a APIs oficiales de Pokemon&trade;</p>
-                
-                </div>
-
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 28/6/2020</small>
-                </div>
+                <p class="card-text text-justify">Revisa las estadisticas de tus pokemones favoritos!</p>
+                <p class="card-text text-justify ">Pokedex v2 es proyecto que utiliza JS y jQuery para conectarse a APIs
+                    oficiales de Pokemon&trade;</p>
 
             </div>
-            <div class="card my-2 col-12 col-md-4 bg-dark ">
-                <a style="text-decoration: none ; color: rgba(207, 207, 207, 0.884);" target="second" href="https://github.com/kamalfontirroig/">
-                    <h5 class="card-title my-3 text-center" style="font-family: 'Sawarabi Gothic'; text-shadow: 2px 2px blue; color:cyan;">
-                        Portafolio</h5>
-                        <div class="container-fluid text-center">
+
+            <div class="card-footer">
+                <small class="text-muted">Last updated 28/6/2020</small>
+            </div>
+
+        </div>
+        <div class="card my-2 col-12 col-md-4 bg-dark ">
+            <a style="text-decoration: none;" target="second"
+                href="https://github.com/kamalfontirroig/">
+                <h5 class="card-title my-3 text-center"
+                    style="font-family: 'Arial'; color:white; text-shadow: 1px 1px black; ">
+                    Portafolio</h5>
+                <div class="container-fluid text-center">
                     <img class="card-img-top rounded" src="assets/img/ProductStock2.gif" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                      
-                        <p class="card-text text-justify"><b>Diversos desafíos que resolví durante mi formación en el curso:
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text text-justify"><b>Diversos desafíos que resolví durante mi formación en el curso:
                             Desarrollador
                             Full
                             Stack Java Trainee.</p></b>
-                        <p class="card-text text-justify">Desde programas para consola en lenguaje java simple hasta proyectos REST
-                            con
-                            SpringBoot 2; utilizando maven, html, css, bootstrap, e integración con bases de datos Oracle y/o H2 en
-                            memoria.</p>
-                    </div>
-                </a>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 12/08/2020</small>
+                    <p class="card-text text-justify">Desde programas para consola en lenguaje java simple hasta
+                        proyectos REST
+                        con
+                        SpringBoot 2; utilizando maven, html, css, bootstrap, e integración con bases de datos Oracle
+                        y/o H2 en
+                        memoria.</p>
                 </div>
+            </a>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 12/08/2020</small>
             </div>
-            <div class="card my-2 col-12 col-md-4 bg-dark ">
-                <h5 class="card-title  my-3 text-center" style="text-shadow: 2px 2px blue; color:cyan;">Lorem Ipsum?
-                </h5>
-                <div class="container-fluid text-center">
+        </div>
+        <div class="card my-2 col-12 col-md-4 bg-dark ">
+            <h5 class="card-title  my-3 text-center" style="color:white; text-shadow: 1px 1px black; ">Lorem Ipsum?
+            </h5>
+            <div class="container-fluid text-center">
                 <img class="card-img-top rounded" src="assets/img/lorem-ipsum.jpg" alt="Card image cap">
-                </div>
-                <div class="card-body">
-                  
-                    <p class="card-text text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem
-                        Ipsum
-                        has been the industry's standard dummy text ever since the 1500s. </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated - - -</small>
-                </div>
+            </div>
+            <div class="card-body">
+
+                <p class="card-text text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry.
+                    Lorem
+                    Ipsum
+                    has been the industry's standard dummy text ever since the 1500s. </p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated - - -</small>
             </div>
         </div>
     </div>
-    <!--   E N D -    Carddeck con proyectos -->
+</div>
+<!--   E N D -    Carddeck con proyectos -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="assets/js/index_script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="assets/js/index_script.js"></script>
 
 </body>
 
