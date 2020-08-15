@@ -1,12 +1,53 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: black;
+  overflow-x: hidden; /* Hide X scrollbars */
 }
+
 
 a:link {
   text-decoration: none;
 }
 
+.navito{
+  position: fixed;
+  display: none;
+  right: 0%;
+  z-index: 10;
+  width: 400px;
+  }
+.parallax {
+  position: relative;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titulo-div {
+  position: absolute;
+  display: none;
+  top:0;
+  width: 40vw;
+  right: 10%;
+z-index: 1;
+}
 .titulo-digital {
+  position: relative;
   font-family: "Press Start 2P";
   color: cyan;
   text-shadow: 2px 2px blue;
@@ -15,6 +56,7 @@ a:link {
 }
 
 .titulo-kamal {
+  position: relative;
   font-family: "Kaushan Script";
   color: blue;
   text-shadow: 2px 2px cyan;
@@ -31,10 +73,18 @@ a:link {
 }
 
 #background-video {
+  
   position: absolute;
   right: 0;
+
 }
 
+.buttons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 .video-button {
   background-color: Transparent;
   background-repeat: no-repeat;
@@ -47,31 +97,40 @@ a:link {
   -moz-box-shadow: none;
 }
 
-#video-contenedor {
-}
 
 header {
   position: relative;
-  background-color: black;
+  background-color:transparent;
   height: 75vh;
-  min-height: 25rem;
+  min-height: 100%;
   width: 100%;
   overflow: hidden;
 }
-
-header video {
-  position: absolute;
+video#videobg {
+ /* position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
   width: auto;
-  height: auto;
-  z-index: 0;
+  min-height: 100%;
+
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);*/
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	background: url('images/poster.jpg') no-repeat;
+	background-size: cover;
+	transition: 1s opacity;
 }
 
 .texto-video {
@@ -93,6 +152,7 @@ header .overlay {
 
 header p,
 header small {
+  position: relative;
   margin: 0;
   padding: 0;
   opacity: 0.7;
@@ -112,33 +172,41 @@ header small {
 }
 
 .fluid-img {
+  position: relative;
   max-width: 350px;
   margin: 0 auto;
 }
 .fading-quotes {
-  display: none;
+  position: relative;
+    display: none;
   font-family: "Sawarabi Gothic";
   color: white;
   text-shadow: 4px 2px black;
 
 }
-​ .b-r {
-  border: 1px solid rgb(255, 23, 124);
-}
-.b-y {
-  border: 1px solid yellow;
-}
 
-.b-g {
-  border: 1px solid green;
+.card-section{
+
+  height: auto;
+  position: absolute;
+  top: 1000px;
+
 }
 
 .card-text {
+  position: relative;
   color: white;
   text-shadow: 1px 1px black;
 }
 
 @media screen and (max-width: 500px) {
+
+
+  .card-section{
+    height: auto;
+  position: absolute;
+    top:400px;
+  }
   .card-title {
     font-size: 18px;
   }
@@ -149,6 +217,8 @@ header small {
 }
 
 @media screen and (min-width: 501px) and (max-width: 767px) {
+ 
+
   .card-title {
     font-size: 24px;
   }
@@ -162,7 +232,7 @@ header small {
   .card-title {
     font-size: 18px;
   }
-
+ s
   .card-text {
     font-size: 14px;
   }
@@ -192,3 +262,33 @@ header small {
     object-fit: cover;
   }
 }*/
+​ .b-r {
+  border: 1px solid rgb(255, 23, 124);
+}
+.b-y {
+  border: 1px solid yellow;
+}
+
+.b-g {
+  border: 1px solid green;
+}
+
+
+.z-back {
+  position: relative;
+  z-index: -5;
+}
+
+.z-mid{
+  position: relative;
+  z-index: 0;
+}
+.z-front{
+  position: relative;
+  z-index: 5;
+}
+
+.f-front{
+  position: fixed;
+  z-index: 5;
+}

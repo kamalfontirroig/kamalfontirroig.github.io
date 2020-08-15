@@ -25,131 +25,190 @@ font-family: 'Sawarabi Mincho', sans-serif;-->
 
 <body>
 
-    <h1 class="text-right">
-        <scope class="titulo-kamal">Kamál.</scope>
-        <scope class="titulo-digital">digital</scope>
-    </h1>
+    <!-- TITULO -->
+    <div class="titulo-div f-front">
+        <h1 class="text-right ">
+            <scope class="titulo-kamal">Kamál.</scope>
+            <scope class="titulo-digital">digital</scope>
+        </h1>
+    </div>
+    <!-- TITULO -->
 
-    <header class="col-12" style="max-width: 100%; height: 50vw;">
-        <div class="overlay">
-            <button id="vidbuttonPlay" onclick="togglePlay()" class="btn video-button"><i class="fa fa-pause"></i></button>
-            <br>
-            <button id="vidbuttonMute" onclick="toggleMute()"  class="btn video-button">mute</i></button>
+    <!-- NAV-->
+    <div class="navito">
+    <ul class="nav f-front">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Subir</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#proyectos">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="second" href="https://github.com/kamalfontirroig">Git-Hub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="productStock" href="http://productstock.herokuapp.com/" tabindex="-1" aria-disabled="true">-ProductStock-</a>
+        </li>
+      </ul>
+    </div>
+    <!-- NAV-->
+
+    <!--VIDEO PARALLAX-->
+    <video poster="images/poster.jpg" id="videobg" playsinline="playsinline" autoplay="autoplay"
+    loop="loop">
+    <source src="assets/video/space-flight-loop.mp4" type="video/mp4">
+    <source src="ghostritualdonthugme-v1.0-24.7mb.webm" type="video/webm">
+</video>
+    <header class="col-12 parallax" style="max-width: 100vw; height: 100vh;">
+        <div class="overlay"> </div>
+        <audio autoplay id="audio"> <source src="assets/video/dreamstate.mp3"  type="audio/mpeg"> </audio>
+          
+        <!--VIDEO QUOTES-->
+        <div class="quotes-container texto-video">
+
+            <div class="fading-quotes" style="font-family: 'Lucida Sans'; font-size: 2.5vw;">
+                <p class="  mb-0 text-right">"La originalidad no es otra cosa que imitación con
+                    criterio" </p>
+                <br>
+                <p class=" mb-0 text-right">- Voltaire</p>
+            </div>
+            <div class="fading-quotes" style="font-family: 'Dancing Script'; font-size: 3.5vw;">
+                <p class="mb-0 text-right">"No tengas miedo de la perfección, nunca la vas a alcanzar"</p>
+                <br>
+                <p class="mb-0 text-right">- Dali</p>
+            </div>
+            <div class="fading-quotes" style="font-family: 'Sawarabi Mincho';   font-size: 2.5vw;">
+                <p class=" mb-0 text-right">"La curiosidad sobre la vida en todos sus aspectos, continúa siendo
+                    el secreto de las personas más creativas"</p>
+                <br>
+                <p class="mb-0 text-right">- Burnett</p>
+            </div>
+            <div class="fading-quotes" style="font-family: 'Kaushan Script'; font-size: 2.2vw;">
+                <p class=" mb-0 text-right">"La creatividad es contagiosa. Pásala"</p>
+                <br>
+                <p class="s mb-0 text-right">- Einstein</p>
+            </div>
+
         </div>
-        <video id="header-video" style="max-width: 100%; height: auto;" playsinline="playsinline" autoplay="autoplay"
-            loop="loop">
-            <source src="ghost-slow.mp4" type="video/mp4">
-            <source src="ghostritualdonthugme-v1.0-24.7mb.webm" type="video/webm">
-        </video>
-
-
-
-<div class="quotes-container texto-video">
-
-    <div class="fading-quotes" style="font-family: 'Lucida Sans'; font-size: 2.5vw;">
-        <p class="  mb-0 text-right">"La originalidad no es otra cosa que imitación con
-            criterio" </p>
+        <!--VIDEO QUOTES-->
+        
+    
+    </header>
+    <div class="buttons">
+        <button id="vidbuttonPlay" onclick="togglePlay()" class="btn video-button"></button>
         <br>
-        <p class=" mb-0 text-right">- Voltaire</p>
+        <button id="vidbuttonMute" onclick="toggleAudio()" class="btn video-button "></button>
     </div>
-    <div class="fading-quotes" style="font-family: 'Dancing Script'; font-size: 3.5vw;">
-        <p class="mb-0 text-right">"No tengas miedo de la perfección, nunca la vas a alcanzar"</p>
-        <br>
-        <p class="mb-0 text-right">- Dali</p>
-    </div>
-    <div class="fading-quotes" style="font-family: 'Sawarabi Mincho';   font-size: 2.5vw;">
-        <p class=" mb-0 text-right">"La curiosidad sobre la vida en todos sus aspectos, continúa siendo
-            el secreto de las personas más creativas"</p>
-        <br>
-        <p class="mb-0 text-right">- Burnett</p>
-    </div>
-    <div class="fading-quotes" style="font-family: 'Kaushan Script'; font-size: 2.2vw;">
-        <p class=" mb-0 text-right">"La creatividad es contagiosa. Pásala"</p>
-        <br>
-        <p class="s mb-0 text-right">- Einstein</p>
-    </div>
+    <!--VIDEO PARALLAX-->
 
-</div>
-</header>
+    <!-- CARDS -->
+    <div id="proyectos" class="card-section text-center z-mid">
 
-<!-- Carddeck con proyectos -->
-<div class="card-group m-5 my-10 ">
-    <div class="row text-center">
-        <div class="card my-2 col-12 col-md-4 bg-dark">
-            <a style="text-decoration: none;" target="second" href="pokedex/pokedex.html">
-                <h5 class="card-title  my-3 text-center roboto" style=" color: red; text-shadow: 1px 1px rgb(0, 255, 0);">
-                    Pokedex v2
+
+        <!-- 1> -->
+        <div class="row ">
+            <h1 class="text-center" style="width: 800px; color: white"  >Mis Proyectos</h1>
+        </div>
+        <div class="row ">
+            <div class="col-1"></div>
+
+            <div class="card my-5  mx-5  col-5 d-inline-block bg-dark  z-mid">
+
+
+                <a style="text-decoration: none;" target="second" href="pokedex/pokedex.html">
+                    <h5 class="card-title  my-3 text-center roboto"
+                        style=" color: red; text-shadow: 1px 1px rgb(0, 255, 0);">
+                        Pokedex v2
+                    </h5>
+                    <div class="container-fluid text-center">
+                        <img class="card-img-top rounded center" src="assets/img/pokedex-icono.png" alt="pokedex.jpg">
+                    </div>
+                </a>
+                <div class="card-body">
+
+                    <p class="card-text text-justify">Revisa las estadisticas de tus pokemones favoritos!</p>
+                    <p class="card-text text-justify ">Pokedex v2 es proyecto que utiliza JS y jQuery para
+                        conectarse a
+                        APIs
+                        oficiales de Pokemon&trade;</p>
+
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 28/6/2020</small>
+                </div>
+            </div>
+        </div>
+        <!-- 2> -->
+        <div class="row">
+            <div class="col-1"></div>
+
+            <div class="card my-5 col-5   mx-5 d-inline-block bg-dark ">
+
+
+                <a style="text-decoration: none;" target="second" href="https://github.com/kamalfontirroig/">
+                    <h5 class="card-title my-3 text-center"
+                        style="font-family: 'Arial'; color:white; text-shadow: 1px 1px black; ">
+                        Portafolio</h5>
+                    <div class="container-fluid text-center">
+                        <img class="card-img-top rounded" src="assets/img/ProductStock2.gif" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+
+                        <p class="card-text text-justify"><b>Diversos desafíos que resolví durante mi formación en
+                                el
+                                curso:
+                                Desarrollador
+                                Full
+                                Stack Java Trainee.</p></b>
+                        <p class="card-text text-justify">Desde programas para consola en lenguaje java simple hasta
+                            proyectos REST
+                            con
+                            SpringBoot 2; utilizando maven, html, css, bootstrap, e integración con bases de datos
+                            Oracle
+                            y/o H2 en
+                            memoria.</p>
+                    </div>
+                </a>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 12/08/2020</small>
+                </div>
+            </div>
+        </div>
+        <!-- 3> -->
+        <div class="row">
+            <div class="col-1"></div>
+
+            <div class="card my-5 col-5  mx-5  d-inline-block bg-dark ">
+
+
+                <h5 class="card-title  my-3 text-center" style="color:white; text-shadow: 1px 1px black; ">Lorem
+                    Ipsum?
                 </h5>
                 <div class="container-fluid text-center">
-                    <img class="card-img-top rounded center" src="assets/img/pokedex-icono.png" alt="pokedex.jpg">
-                </div>
-            </a>
-            <div class="card-body">
-
-
-                <p class="card-text text-justify">Revisa las estadisticas de tus pokemones favoritos!</p>
-                <p class="card-text text-justify ">Pokedex v2 es proyecto que utiliza JS y jQuery para conectarse a APIs
-                    oficiales de Pokemon&trade;</p>
-
-            </div>
-
-            <div class="card-footer">
-                <small class="text-muted">Last updated 28/6/2020</small>
-            </div>
-
-        </div>
-        <div class="card my-2 col-12 col-md-4 bg-dark ">
-            <a style="text-decoration: none;" target="second"
-                href="https://github.com/kamalfontirroig/">
-                <h5 class="card-title my-3 text-center"
-                    style="font-family: 'Arial'; color:white; text-shadow: 1px 1px black; ">
-                    Portafolio</h5>
-                <div class="container-fluid text-center">
-                    <img class="card-img-top rounded" src="assets/img/ProductStock2.gif" alt="Card image cap">
+                    <img class="card-img-top rounded" src="assets/img/lorem-ipsum.jpg" alt="Card image cap">
                 </div>
                 <div class="card-body">
 
-                    <p class="card-text text-justify"><b>Diversos desafíos que resolví durante mi formación en el curso:
-                            Desarrollador
-                            Full
-                            Stack Java Trainee.</p></b>
-                    <p class="card-text text-justify">Desde programas para consola en lenguaje java simple hasta
-                        proyectos REST
-                        con
-                        SpringBoot 2; utilizando maven, html, css, bootstrap, e integración con bases de datos Oracle
-                        y/o H2 en
-                        memoria.</p>
+                    <p class="card-text text-justify">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting
+                        industry.
+                        Lorem
+                        Ipsum
+                        has been the industry's standard dummy text ever since the 1500s. </p>
                 </div>
-            </a>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 12/08/2020</small>
-            </div>
-        </div>
-        <div class="card my-2 col-12 col-md-4 bg-dark ">
-            <h5 class="card-title  my-3 text-center" style="color:white; text-shadow: 1px 1px black; ">Lorem Ipsum?
-            </h5>
-            <div class="container-fluid text-center">
-                <img class="card-img-top rounded" src="assets/img/lorem-ipsum.jpg" alt="Card image cap">
-            </div>
-            <div class="card-body">
-
-                <p class="card-text text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry.
-                    Lorem
-                    Ipsum
-                    has been the industry's standard dummy text ever since the 1500s. </p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated - - -</small>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated - - -</small>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!--   E N D -    Carddeck con proyectos -->
+    </div>
+    <!-- CARDS -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script src="assets/js/index_script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="assets/js/index_script.js"></script>
 
 </body>
 
