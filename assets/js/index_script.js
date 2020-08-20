@@ -22,13 +22,13 @@
 
 })()
 
-window.onload = function () {   
+$(document).ready( ()=>{   
     playPause();
     audioMute();
     audio = document.getElementById("audio");
     audio.volume = 0.5;
    
-}
+})
 
 
 
@@ -49,7 +49,7 @@ function togglePlay() {
 function playPause() {
     var ppbutton = document.getElementById("vidbuttonPlay");
     var myVideo = document.getElementById("videobg");
-    if (myVideo.paused) {
+    if (!myVideo.paused) {
         ppbutton.innerHTML = `<i class="fa fa-pause" class="z-front"></i>`;
     }
     else {

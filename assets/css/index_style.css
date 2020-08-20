@@ -17,7 +17,7 @@ a:link {
   display: none;
   right: 0%;
   z-index: 10;
-  width: 400px;
+  width: 500px;
   }
 .parallax {
   position: relative;
@@ -161,7 +161,7 @@ header small {
 
 .quotes-container {
   position: relative;
-  margin-top: 10%;
+  margin-top: 140px;
   padding-left: 60%;
   padding-right: 2%;
 }
