@@ -26,6 +26,7 @@ function initMap() {
     zoom: 14.2,
     scaleControl: true,
   });
+//{lat:  -20.311050, lng: -70.075056},{lat:-20.178316, lng: -70.186185}
   bounds = new google.maps.LatLngBounds();
   google.maps.event.addListenerOnce(map, "tilesloaded", function (evt) {
     bounds = map.getBounds();
@@ -52,11 +53,14 @@ function initMap() {
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
 
   var autocomplete = new google.maps.places.Autocomplete(input);
+  console.log(bounds)
+  autocomplete.setBounds(bounds)
+  autocomplete.setOptions({componentRestrictions: {country: 'cl'}}) //{strictBounds: true}
   autocomplete.addListener("place_changed", function () {
     marker.setMap(null);
     var place = autocomplete.getPlace();
     var newBounds = new google.maps.LatLngBounds();
-    newBounds = bounds;
+		newBounds = bounds;
     if (!place.geometry) {
       window.alert(
         "Al escribir una direccion, debe elegir una de las sugerencias que entrega google. (NO PRESIONE 'ENTER')"
@@ -69,7 +73,7 @@ function initMap() {
     marker.setPosition(place.geometry.location);
     marker.setMap(map);
     newBounds.extend(place.geometry.location);
-    map.fitBounds(newBounds);
+    map.fitBounds(bounds);
 
     if (
       google.maps.geometry.poly.containsLocation(
@@ -144,7 +148,7 @@ function initMap() {
 
 						//	alert("Pertenece al Cesfam Hector Reyno");
 						  } else {
-							('#sugerencia').empty()
+							$('#sugerencia').empty()
 							$('#sugerencia').append(errors)
 						//	alert(
 						//	  "No esta dentro de ningun sector, revisa direccion o chequea manualmente"
