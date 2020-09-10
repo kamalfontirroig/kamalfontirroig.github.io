@@ -1,3 +1,4 @@
+
 (function() {
 
     var quotes = $(".fading-quotes");
@@ -22,43 +23,72 @@
 
 })()
 
-$(document).ready( ()=>{   
-    playPause();
-    audioMute();
+$(document).ready( function(){   
+    myVideo = document.getElementById("videobg");
+    myVideo.play()
     audio = document.getElementById("audio");
     audio.volume = 0.5;
-   
+    changePlayIcon();
+    changeAudioIcon();
 })
-
-
 
 function togglePlay() {
     var myVideo = document.getElementById("videobg");
     if (myVideo.paused) {
         myVideo.play();
-        playPause();
+        changePlayIcon();
     }
     else {
         myVideo.pause();
-        playPause();
+        changePlayIcon();
     }
     
 }
 
+function toggleAudio() {
+    var audio = document.getElementById("audio");
+    audio.muted = !audio.muted;
+    changeAudioIcon();
+}
 
-function playPause() {
+
+
+function changePlayIcon() {
     var ppbutton = document.getElementById("vidbuttonPlay");
     var myVideo = document.getElementById("videobg");
-    if (!myVideo.paused) {
-        ppbutton.innerHTML = `<i class="fa fa-pause" class="z-front"></i>`;
+    if (myVideo.paused) {    
+        ppbutton.innerHTML = `<i class="fa fa-play" class="z-front"></i>`;
     }
     else {
-        ppbutton.innerHTML = `<i class="fa fa-play"class="z-front"></i>`;
+        ppbutton.innerHTML = `<i class="fa fa-pause" class="z-front"></i>`;
     }
 }
 
 
-function muteUnmute() {
+function changeAudioIcon() {
+    var mubutton = document.getElementById("vidbuttonMute");
+    audio = document.getElementById("audio");
+    if (!audio.muted) {
+        mubutton.innerHTML = `<i class="fa fa-volume-up" class="z-front"></i>`;
+    }
+    else {
+        mubutton.innerHTML = `<i class="fa fa-volume-off" class="z-front"></i>`;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* function muteUnmute() {
     var mubutton = document.getElementById("vidbuttonMute");
     myVideo = document.getElementById("videobg");
     if (myVideo.muted) {
@@ -73,22 +103,4 @@ function toggleMute() {
     var myVideo = document.getElementById("videobg");
     myVideo.muted = !myVideo.muted;
     muteUnmute();
-}
-
-
-function audioMute() {
-    var mubutton = document.getElementById("vidbuttonMute");
-    audio = document.getElementById("audio");
-    if (audio.muted) {
-        mubutton.innerHTML = `<i class="fa fa-volume-up" class="z-front"></i>`;
-    }
-    else {
-        mubutton.innerHTML = `<i class="fa fa-volume-off" class="z-front"></i>`;
-    }
-}
-
-function toggleAudio() {
-    var audio = document.getElementById("audio");
-    audio.muted = !audio.muted;
-    audioMute();
-}
+} */

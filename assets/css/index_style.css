@@ -2,23 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: black;
-  overflow-x: hidden; /* Hide X scrollbars */
-}
-
 
 a:link {
   text-decoration: none;
 }
 
-.navito{
-  position: fixed;
-  display: none;
-  right: 0%;
-  z-index: 10;
-  width: 500px;
-  }
+/* .navito en media queries*/
 .parallax {
   position: relative;
 
@@ -29,7 +18,7 @@ a:link {
   min-height: 100%;
 
   /* Set a specific height */
-  min-height: 500px; 
+  min-height: 500px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -41,10 +30,10 @@ a:link {
 .titulo-div {
   position: absolute;
   display: none;
-  top:0;
+  top: 0;
   width: 40vw;
-  right: 10%;
-z-index: 1;
+  right: 5%;
+  z-index: 1;
 }
 .titulo-digital {
   position: relative;
@@ -73,10 +62,8 @@ z-index: 1;
 }
 
 #background-video {
-  
   position: absolute;
   right: 0;
-
 }
 
 .buttons {
@@ -97,17 +84,16 @@ z-index: 1;
   -moz-box-shadow: none;
 }
 
-
 header {
   position: relative;
-  background-color:transparent;
+  background-color: transparent;
   height: 75vh;
   min-height: 100%;
   width: 100%;
   overflow: hidden;
 }
 video#videobg {
- /* position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100%;
@@ -119,18 +105,18 @@ video#videobg {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);*/
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -100;
-	transform: translateX(-50%) translateY(-50%);
-	background: url('images/poster.jpg') no-repeat;
-	background-size: cover;
-	transition: 1s opacity;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url("") no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
 }
 
 .texto-video {
@@ -178,19 +164,18 @@ header small {
 }
 .fading-quotes {
   position: relative;
-    display: none;
+  display: none;
   font-family: "Sawarabi Gothic";
   color: white;
   text-shadow: 4px 2px black;
-
 }
 
-.card-section{
 
+.card-section {
   height: auto;
   position: absolute;
+  margin-left: 40px;
   top: 1000px;
-
 }
 
 .card-text {
@@ -199,13 +184,21 @@ header small {
   text-shadow: 1px 1px black;
 }
 
+
 @media screen and (max-width: 500px) {
-
-
-  .card-section{
+#site{
+  display: none;
+}
+#size-error{
+  display: inline;
+}
+}
+/*
+@media screen and (max-width: 500px) {
+  .card-section {
     height: auto;
-  position: absolute;
-    top:400px;
+    position: absolute;
+    top: 400px;
   }
   .card-title {
     font-size: 18px;
@@ -214,11 +207,25 @@ header small {
   .card-text {
     font-size: 12px;
   }
+
+  .navito {
+    position: fixed;
+    display: none;
+    top: 75px;
+    left: 0;
+    z-index: 10;
+    width: 200px;
+  }
 }
-
+*/
 @media screen and (min-width: 501px) and (max-width: 767px) {
- 
-
+  #size-error{
+    display: none;
+  }
+body {
+  background-color: black;
+  overflow-x: hidden; /* Hide X scrollbars */
+}
   .card-title {
     font-size: 24px;
   }
@@ -226,19 +233,57 @@ header small {
   .card-text {
     font-size: 18px;
   }
+
+  .navito {
+    position: fixed;
+    display: none;
+    top: 75px;
+    left: 0;
+    z-index: 10;
+    width: 200px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  #size-error{
+    display: none;
+  }
+body {
+  background-color: black;
+  overflow-x: hidden; /* Hide X scrollbars */
+}
   .card-title {
     font-size: 18px;
   }
- s
-  .card-text {
+  s .card-text {
     font-size: 14px;
   }
+
+  .navito{
+    position: fixed;
+    display: none;
+    top: 75px;
+    left: 0;
+    z-index: 10;
+    width: 200px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
+  #size-error{
+    display: none;
+  }
+body {
+  background-color: black;
+  overflow-x: hidden; /* Hide X scrollbars */
+}
+  .quotes-container {
+    position: relative;
+    margin-top: 250px;
+    padding-left: 60%;
+    padding-right: 2%;
+  }
+
   .card-title {
     font-size: 25px;
   }
@@ -246,7 +291,16 @@ header small {
   .card-text {
     font-size: 18px;
   }
+
+  .navito{
+    position: fixed;
+    display: none;
+    right: 0%;
+    z-index: 10;
+    width: 500px;
+    }
 }
+
 /* @media screen and (min-height: 801px) {
   .card-img-top {
     width: 100%;
@@ -262,6 +316,7 @@ header small {
     object-fit: cover;
   }
 }*/
+
 ​ .b-r {
   border: 1px solid rgb(255, 23, 124);
 }
@@ -273,22 +328,21 @@ header small {
   border: 1px solid green;
 }
 
-
 .z-back {
   position: relative;
   z-index: -5;
 }
 
-.z-mid{
+.z-mid {
   position: relative;
   z-index: 0;
 }
-.z-front{
+.z-front {
   position: relative;
   z-index: 5;
 }
 
-.f-front{
+.f-front {
   position: fixed;
   z-index: 5;
 }

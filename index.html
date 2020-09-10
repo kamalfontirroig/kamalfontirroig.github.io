@@ -24,18 +24,44 @@ font-family: 'Sawarabi Mincho', sans-serif;-->
 </head>
 
 <body>
-  <!-- <iframe src="assets/video/silence.mp3" allow="autoplay" id="audio" muted style="display: none"></iframe>--> 
-    <!-- TITULO -->
-    <div class="titulo-div f-front my-4">
-        <h1 class="text-right ">
-            <scope class="titulo-kamal">Kamál.</scope>
-            <scope class="titulo-digital">digital</scope>
-        </h1>
-    </div>
-    <!-- TITULO -->
+    <span id="size-error">
+        Woah, that's too small... (that's what she said)
+    </span>
+    <span id="site">
 
-    <!-- NAV-->
-    <div class="navito">
+
+        <!-- <iframe src="assets/video/silence.mp3" allow="autoplay" id="audio" muted style="display: none"></iframe>-->
+        <!-- TITULO -->
+        <div class="titulo-div f-front my-4">
+            <h1 class="text-right ">
+                <scope class="titulo-kamal">Kamál.</scope>
+                <scope class="titulo-digital">digital</scope>
+            </h1>
+        </div>
+        <!-- TITULO -->
+
+        <!-- NAV-->
+
+        <div class="navito navbar-expand-xl ">
+
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span style="color: white;"><i class="white fa fa-bars "></i></span>
+            </button>
+            <div class="navbar-light collapse navbar-collapse  f-front" id="navbarNav">
+                <a class="nav-link active" href="#">Inicio</a>
+                <a class="nav-link" href="#proyectos">Proyectos</a>
+                <a class="nav-link" target="second" href="https://github.com/kamalfontirroig">Git-Hub</a>
+                <a class="nav-link active" target="cesfam" href="https://kamalfontirroig.github.io/cesfam">-Cesfam-</a>
+                       
+                <a class="nav-link" target="productStock" href="http://productstock.herokuapp.com/" tabindex="-1"
+                    aria-disabled="true">-ProductStock-</a>
+
+
+            </div>
+        </div>
+
+        <!--<div class="navito">
     <ul class="nav f-front">
         <li class="nav-item">
           <a class="nav-link active" href="#">Subir</a>
@@ -53,166 +79,193 @@ font-family: 'Sawarabi Mincho', sans-serif;-->
           <a class="nav-link" target="productStock" href="http://productstock.herokuapp.com/" tabindex="-1" aria-disabled="true">-ProductStock-</a>
         </li>
       </ul>
-    </div>
-    <!-- NAV-->
+    </div> -->
+        <!-- NAV-->
 
-    <!--VIDEO PARALLAX-->
-    <video  id="videobg" playsinline="playsinline" autoplay="autoplay" autoplay
-    loop="loop">
-    <source src="assets/video/space-flight-loop.mp4" type="video/mp4">
-    <source src="ghostritualdonthugme-v1.0-24.7mb.webm" type="video/webm">
-</video>
-    <header class="col-12 parallax" style="max-width: 100vw; height: 100vh;">
-        <div class="overlay"> </div>
-        <audio autoplay id="audio"> <source src="assets/video/dreamstate.mp3"  type="audio/mpeg"> </audio>
-          
-        <!--VIDEO QUOTES-->
-        <div class="quotes-container texto-video">
+        <!--VIDEO PARALLAX-->
+        <video id="videobg" playsinline="playsinline" autoplay="autoplay" loop="loop">
+            <source src="assets/video/space-flight-loop.mp4" type="video/mp4">
 
-            <div class="fading-quotes" style="font-family: 'Lucida Sans'; font-size: 2.5vw;">
-                <p class="  mb-0 text-right">"La originalidad no es otra cosa que imitación con
-                    criterio" </p>
-                <br>
-                <p class=" mb-0 text-right">- Voltaire</p>
-            </div>
-            <div class="fading-quotes" style="font-family: 'Dancing Script'; font-size: 3.5vw;">
-                <p class="mb-0 text-right">"No tengas miedo de la perfección, nunca la vas a alcanzar"</p>
-                <br>
-                <p class="mb-0 text-right">- Dali</p>
-            </div>
-            <div class="fading-quotes" style="font-family: 'Sawarabi Mincho';   font-size: 2.5vw;">
-                <p class=" mb-0 text-right">"La curiosidad sobre la vida en todos sus aspectos, continúa siendo
-                    el secreto de las personas más creativas"</p>
-                <br>
-                <p class="mb-0 text-right">- Burnett</p>
-            </div>
-            <div class="fading-quotes" style="font-family: 'Kaushan Script'; font-size: 2.2vw;">
-                <p class=" mb-0 text-right">"La creatividad es contagiosa. Pásala"</p>
-                <br>
-                <p class="s mb-0 text-right">- Einstein</p>
-            </div>
+        </video>
+        <header class="col-12 parallax" style="max-width: 100vw; height: 100vh;">
+            <div class="overlay"> </div>
+            <audio autoplay id="audio">
+                <source src="assets/video/dreamstate.mp3" type="audio/mpeg"> </audio>
 
+            <!--VIDEO QUOTES-->
+            <div class="quotes-container texto-video">
+
+                <div class="fading-quotes" style="font-family: 'Lucida Sans'; font-size: 2.5vw;">
+                    <p class="  mb-0 text-right">"La originalidad no es otra cosa que imitación con
+                        criterio" </p>
+                    <br>
+                    <p class=" mb-0 text-right">- Voltaire</p>
+                </div>
+                <div class="fading-quotes" style="font-family: 'Dancing Script'; font-size: 3.5vw;">
+                    <p class="mb-0 text-right">"No tengas miedo de la perfección, nunca la vas a alcanzar"</p>
+                    <br>
+                    <p class="mb-0 text-right">- Dali</p>
+                </div>
+                <div class="fading-quotes" style="font-family: 'Sawarabi Mincho';   font-size: 2.5vw;">
+                    <p class=" mb-0 text-right">"La curiosidad sobre la vida en todos sus aspectos, continúa siendo
+                        el secreto de las personas más creativas"</p>
+                    <br>
+                    <p class="mb-0 text-right">- Burnett</p>
+                </div>
+                <div class="fading-quotes" style="font-family: 'Kaushan Script'; font-size: 2.2vw;">
+                    <p class=" mb-0 text-right">"La creatividad es contagiosa. Pásala"</p>
+                    <br>
+                    <p class="s mb-0 text-right">- Einstein</p>
+                </div>
+
+            </div>
+            <!--VIDEO QUOTES-->
+
+
+        </header>
+        <div class="buttons">
+            <button id="vidbuttonPlay" onclick="togglePlay()" class="btn video-button"></button>
+            <br>
+            <button id="vidbuttonMute" onclick="toggleAudio()" class="btn video-button "></button>
         </div>
-        <!--VIDEO QUOTES-->
-        
-    
-    </header>
-    <div class="buttons">
-        <button id="vidbuttonPlay" onclick="togglePlay()" class="btn video-button"></button>
-        <br>
-        <button id="vidbuttonMute" onclick="toggleAudio()" class="btn video-button "></button>
-    </div>
-    <!--VIDEO PARALLAX-->
+        <!--VIDEO PARALLAX-->
 
-    <!-- CARDS -->
-    <div id="proyectos" class="card-section text-center z-mid">
+        <!-- CARDS -->
+        <div id="proyectos" class="card-section text-center z-mid">
 
 
-        <!-- 1> -->
-        <div class="row ">
-            <h1 class="text-center" style="width: 800px; color: white"  >Mis Proyectos</h1>
-        </div>
-        <div class="row ">
-            <div class="col-1"></div>
 
-            <div class="card my-5  mx-5  col-5 d-inline-block bg-dark  z-mid">
+            <!-- 1> -->
+            <div class="row">
+                <div class="col-1"></div>
+
+                <div class="card my-5 col-5  mx-5  d-inline-block bg-dark ">
 
 
-                <a style="text-decoration: none;" target="second" href="pokedex/pokedex.html">
-                    <h5 class="card-title  my-3 text-center roboto"
-                        style=" color: red; text-shadow: 1px 1px rgb(0, 255, 0);">
-                        Pokedex v2
+                    <h5 class="card-title  my-3 text-center" style="color:white; text-shadow: 1px 1px black; ">-Cesfam-
                     </h5>
                     <div class="container-fluid text-center">
-                        <img class="card-img-top rounded center" src="assets/img/pokedex-icono.png" alt="pokedex.jpg">
-                    </div>
-                </a>
-                <div class="card-body">
-
-                    <p class="card-text text-justify">Revisa las estadisticas de tus pokemones favoritos!</p>
-                    <p class="card-text text-justify ">Pokedex v2 es proyecto que utiliza JS y jQuery para
-                        conectarse a
-                        APIs
-                        oficiales de Pokemon&trade;</p>
-
-                </div>
-
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 28/6/2020</small>
-                </div>
-            </div>
-        </div>
-        <!-- 2> -->
-        <div class="row">
-            <div class="col-1"></div>
-
-            <div class="card my-5 col-5   mx-5 d-inline-block bg-dark ">
-
-
-                <a style="text-decoration: none;" target="second" href="https://github.com/kamalfontirroig/">
-                    <h5 class="card-title my-3 text-center"
-                        style="font-family: 'Arial'; color:white; text-shadow: 1px 1px black; ">
-                        Portafolio</h5>
-                    <div class="container-fluid text-center">
-                        <img class="card-img-top rounded" src="assets/img/ProductStock2.gif" alt="Card image cap">
+                        <img class="card-img-top rounded" src="assets/img/cesfam.PNG" alt="Card image cap">
                     </div>
                     <div class="card-body">
 
-                        <p class="card-text text-justify"><b>Diversos desafíos que resolví durante mi formación en
+                        <p class="card-text text-justify">Es un micro servicio desarrollado sin fin de lucro para apoyar
+                            a los servicios de salud de las comunas de Iquique y Alto hospico. Consume las APIs de
+                            Google Maps para que, al ingresar una dirección, categorice a qué Cesfam pertenece dicha
+                            dirección. </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 26/09/2020</small>
+                    </div>
+                </div>
+            </div>
+      
+         
+            <!-- 2> -->
+            <div class="row">
+                <div class="col-1"></div>
+
+                <div class="card my-5 col-5   mx-5 d-inline-block bg-dark ">
+
+
+                    <a style="text-decoration: none;" target="productStock" href="http://productstock.herokuapp.com/">
+                        <h5 class="card-title my-3 text-center"
+                            style="font-family: 'Arial'; color:white; text-shadow: 1px 1px black; ">
+                            -ProductStock-</h5>
+                        <div class="container-fluid text-center">
+                            <img class="card-img-top rounded" src="assets/img/ProductStock2.gif" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+
+                            <p class="card-text text-justify">Proyecto desarrollado en Springboot, utilizando
+                                    Bootstrap y PostgreSQL, para manejar el stock de productos de una bodega. </p>
+                            <p class="card-text text-justify">Sudido a Heroku. </p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 29/08/2020</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3> -->
+            <div class="row ">
+                <div class="col-1"></div>
+
+                <div class="card my-5  mx-5  col-5 d-inline-block bg-dark  z-mid">
+
+
+                    <a style="text-decoration: none;" target="second" href="pokedex/pokedex.html">
+                        <h5 class="card-title  my-3 text-center roboto"
+                            style=" color: red; text-shadow: 1px 1px rgb(0, 255, 0);">
+                            Pokedex v2
+                        </h5>
+                        <div class="container-fluid text-center">
+                            <img class="card-img-top rounded center" src="assets/img/pokedex-icono.png"
+                                alt="pokedex.jpg">
+                        </div>
+                    </a>
+                    <div class="card-body">
+
+                        <p class="card-text text-justify">Revisa las estadisticas de tus pokemones favoritos!</p>
+                        <p class="card-text text-justify ">Pokedex v2 es proyecto que utiliza JS y jQuery para
+                            conectarse a
+                            APIs
+                            oficiales de Pokemon&trade;</p>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 28/6/2020</small>
+                    </div>
+                </div>
+            </div>
+   
+            <!-- 4> -->
+            <div class="row">
+                <div class="col-1"></div>
+
+                <div class="card my-5 col-5   mx-5 d-inline-block bg-dark ">
+
+
+                    <a style="text-decoration: none;" target="second" href="https://github.com/kamalfontirroig/">
+                        <h5 class="card-title my-3 text-center"
+                            style="font-family: 'Arial'; color:white; text-shadow: 1px 1px black; ">
+                            Github</h5>
+                        <div class="container-fluid text-center">
+                            <img class="card-img-top rounded" src="assets/img/github.png" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+
+                            <p class="card-text text-justify">Diversos desafíos que resolví durante mi formación en
                                 el
                                 curso:
-                                Desarrollador
-                                Full
-                                Stack Java Trainee.</p></b>
-                        <p class="card-text text-justify">Desde programas para consola en lenguaje java simple hasta
-                            proyectos REST
-                            con
-                            SpringBoot 2; utilizando maven, html, css, bootstrap, e integración con bases de datos
-                            Oracle
-                            y/o H2 en
-                            memoria.</p>
+                                <b>Desarrollador
+                                    Full
+                                    Stack Java</b>.</p>
+                            <p class="card-text text-justify">Desde programas para consola en lenguaje java simple hasta
+                                proyectos REST
+                                con
+                                SpringBoot 2; utilizando maven, html, css, bootstrap, e integración con bases de datos
+                                Oracle
+                                y/o H2 en
+                                memoria.</p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 10/09/2020</small>
                     </div>
-                </a>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 12/08/2020</small>
                 </div>
             </div>
+
+        <!-- CARDS -->
         </div>
-        <!-- 3> -->
-        <div class="row">
-            <div class="col-1"></div>
 
-            <div class="card my-5 col-5  mx-5  d-inline-block bg-dark ">
-
-
-                <h5 class="card-title  my-3 text-center" style="color:white; text-shadow: 1px 1px black; ">Lorem
-                    Ipsum?
-                </h5>
-                <div class="container-fluid text-center">
-                    <img class="card-img-top rounded" src="assets/img/lorem-ipsum.jpg" alt="Card image cap">
-                </div>
-                <div class="card-body">
-
-                    <p class="card-text text-justify">Lorem Ipsum is simply dummy text of the printing and
-                        typesetting
-                        industry.
-                        Lorem
-                        Ipsum
-                        has been the industry's standard dummy text ever since the 1500s. </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated - - -</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- CARDS -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="assets/js/index_script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="assets/js/index_script.js"></script>
 
 </body>
+</span>
 
 </html>
