@@ -55,7 +55,6 @@ const eliminarDelCarro = (idProducto) => {
     })
    
     productosEnCarro = productosMantenidos
-    console.log(productosEnCarro)
     renderCarro()
     actualizarCantidad()
     alertify.notify(`Eliminado ${productoEliminado.nombre} `, 'error', 5);
