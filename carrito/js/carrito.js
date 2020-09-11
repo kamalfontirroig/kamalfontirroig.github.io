@@ -67,7 +67,7 @@ function renderCarro() {
     $("#carro").empty()
     if ( productosEnCarro.length > 0) {
         
-        $("#carrito-icono").html('<img src="img/carrito-lleno.png" height="50px" >')
+        $("#carrito-icono").html('<img src="https://github.com/kamalfontirroig/kamalfontirroig.github.io/raw/master/carrito/img/carrito-lleno.png" height="50px" >')
     var productosEnCarroHTML = '<h5 class="card-title"> Carro de Compras</h5>' +
                               '<table class="table">' +
                               '<td> Cantidad </td> <td> Producto </td> <td>  </td>'
