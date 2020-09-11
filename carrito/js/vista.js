@@ -42,9 +42,9 @@ function renderProductos(productos) {
 function buscarProducto(fraseBuscada) {
 var palabrasBuscadas = fraseBuscada.split(" ")
 var productosEncontrados = []
-console.log()
+
 if (palabrasBuscadas.length > 0){
-    console.log()
+   
     for (i=0; i < listaProductos.length; i++){
         productoConcatenado = listaProductos[i].nombre + listaProductos[i].desc
         productoConcatenado = productoConcatenado.toLowerCase()
@@ -54,16 +54,13 @@ if (palabrasBuscadas.length > 0){
             }
         }
     }
-    console.log()
+    
     if (productosEncontrados.length > 0){
         renderProductos(productosEncontrados)
     } else {
-        console.log()
         alertify.error("No se encontraron productos", 5)
         renderProductos(listaProductos)
     }
-
-    
 } else {
     renderProductos(listaProductos)
 }
