@@ -1,7 +1,7 @@
 var formatter = new Intl.NumberFormat('es-CL', {
     style: 'currency',
     currency: 'CLP',
-  });
+});
 
 
 window.onload = function () {
@@ -16,7 +16,7 @@ function renderProductos(productos) {
 
     for (i = 0; i < productos.length; i++) {
         var producto =
-                   `<div class="flex-producto">
+            `<div class="flex-producto">
                     <div class="card producto mx-1 my-1">
                         <div class="card-body">
                             <h5 class="card-title">${productos[i].nombre}</h5>
@@ -30,39 +30,40 @@ function renderProductos(productos) {
                             </div>
                         </div> 
                     </div>
-                    </div>`
+             </div>`
 
         cartasDeProductos += producto
     }
-    cartasDeProductos +=`</div>`
+    cartasDeProductos += `</div>`
 
     $("#productos").append(cartasDeProductos)
 }
 
 function buscarProducto(fraseBuscada) {
-var palabrasBuscadas = fraseBuscada.split(" ")
-var productosEncontrados = []
+    var palabrasBuscadas = fraseBuscada.split(" ")
+    var productosEncontrados = []
+    console.log(palabrasBuscadas)
+    if (palabrasBuscadas.length > 0) {
 
-if (palabrasBuscadas.length > 0){
-   
-    for (i=0; i < listaProductos.length; i++){
-        productoConcatenado = listaProductos[i].nombre + listaProductos[i].desc
-        productoConcatenado = productoConcatenado.toLowerCase()
-        for (j=0; j < palabrasBuscadas.length; j++){
-            if (productoConcatenado.indexOf(palabrasBuscadas[j].toLowerCase()) >= 0) {
-                productosEncontrados.push(listaProductos[i])   
+        for (i = 0; i < listaProductos.length; i++) {
+            productoConcatenado = listaProductos[i].nombre + listaProductos[i].desc
+            productoConcatenado = productoConcatenado.toLowerCase()
+            for (j = 0; j < palabrasBuscadas.length; j++) {
+                if (productoConcatenado.indexOf(palabrasBuscadas[j].toLowerCase()) >= 0) {
+                    productosEncontrados.push(listaProductos[i])
+                }
             }
         }
-    }
-    
-    if (productosEncontrados.length > 0){
-        renderProductos(productosEncontrados)
+
+        if (productosEncontrados.length > 0) {
+            alertify.success("Productos encontrados", 3)
+            renderProductos(productosEncontrados)
+        } else {
+            alertify.error("No se encontraron productos", 3)
+            renderProductos(listaProductos)
+        }
     } else {
-        alertify.error("No se encontraron productos", 5)
         renderProductos(listaProductos)
     }
-} else {
-    renderProductos(listaProductos)
-}
-}
 
+}
