@@ -175,7 +175,7 @@ header small {
   height: auto;
   position: absolute;
   margin-left: 40px;
-  top: 1000px;
+  top: 100vh;
 }
 
 .card-text {
